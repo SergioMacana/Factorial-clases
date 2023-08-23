@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+class Factorial {
+private:
+int n, veces;
+public:
+   Factorial(int);
+   void calcular();
+   
+};
+Factorial::Factorial(int _n){
+n = _n;
+}
+
+
+void Factorial::calcular(){
+        int factorial = 1;
+        cout<<"Ingrese el numero: ";
+        cin>>n;
+        for(int i=1;i<=n;i++){
+            factorial = factorial * i;
+            
+        }
+        cout << endl << "Factorial de " << n << " -> " << factorial << endl;
+}
+        
+
+int main(){
+    int veces;
+    cout<< endl<< "Ingrese el numero de factoriales que desea calcular: ";
+    cin>> veces;
+    Factorial n(veces);
+        for(int i=1;i<=veces;i++){
+            n.calcular();
+}
+return 0;
+}
